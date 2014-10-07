@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+    <link rel="apple-touch-icon" href="images/ios.png">
+    <link rel="icon" type="image/png" href="http://i.imgur.com/E2C7Nw6.png" >
+	<style>
+
+    body { 
+    margin: 0; 
+    padding: 0; 
+    background-color: #000000; 
+    margin-top:1px;
+    }
+
+	#canvas {
+    position:absolute;
+    width:100%;
+    height:100%;
+    border: 0
+		}
+
+    #topbar {
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 0px;
+        display: inline-block;
+    }
+    .masthead-imageSmall {
+    width: 40px;
+    height: 30px;
+    margin-top: 10px;
+    padding: 0;
+    }
+    .masthead-image {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    padding: 0;
+    }
+    .masthead-imageBIG {
+    width: 150px;
+    height: 44px;
+    margin-top: 10px;
+    padding: 0;
+    }
+
+    #leftpic {
+    background: url('images/back.png') no-repeat left top;
+    margin-right:20px;
+    float: left;
+    }
+    #leftpic2 {
+    
+    float: left;
+    }
+
+    #rightpic {
+    background: url('images/save.png') no-repeat right top;
+    float: right;
+    }
+    #rightpic2 {
+    background: url('images/clear.png') no-repeat right top;
+    float: right;
+    }
+
+    #masthead {
+    background: #000000;
+    height : 44px;
+    padding : 0;
+    margin: 0px auto 0 auto;
+    margin-top: 0px;
+    width: 90%;
+    border: 0
+    }
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    </style>
+    <title>FFFUNCTIONS</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.0.0.min.js"></script>
+    <script type="text/javascript" src="js/superlines.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+    <script src="http://www.nihilogic.dk/labs/canvas2image/canvas2image.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/shadowbox.css">
+    <script type="text/javascript" src="js/shadowbox.js"></script>
+    <script type="text/javascript">
+    Shadowbox.init({
+    overlayOpacity: 0.1,
+    });
+    </script>
+
+    <script>
+    function to_image(){
+                var canvas = document.getElementById("canvas");
+                document.getElementById("theimage").src = canvas.toDataURL();
+                Canvas2Image.saveAsPNG(canvas);
+            }
+    </script>
+    
+    <link rel="stylesheet" href="css/add2home.css">
+<script type="application/javascript" src="js/add2home.js"></script>
+    
+</head>
+
+<body>
+
+    <div id="masthead">
+    
+    <div id="leftpic" class="masthead-imageSmall" onclick="location.href='index.html'"></div>
+    <div id="leftpic2" class="masthead-image">
+        <a href="images/ctrl.png" rel="lightbox"><img src="images/controls.png" alt=""/></a>
+    </div>
+    <div id="rightpic" class="masthead-image" onclick="location.href='javascript:to_image();'"></div>
+    <div id="rightpic2" class="masthead-imageBIG" onclick="location.href='canvas.html'"></div>
+
+    </div>
+   
+    <div id="canvas1">
+    <canvas id="canvas"> GET GOOGLE CHROME YOU FOOL! </canvas>
+    <image id="theimage"></image>
+    </div>
+    
+    
+    
+</body>
+</html>
